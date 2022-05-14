@@ -1,0 +1,11 @@
+package com.spring.boot.model;
+
+
+@Entity
+public class PurchaseReport {
+	
+	private int productId;
+	private String productName;
+	private String productCategory;
+
+}

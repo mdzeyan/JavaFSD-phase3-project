@@ -1,0 +1,18 @@
+package com.spring.boot.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/requestParam")
+public class RequestParamController {
+	
+	@GetMapping("/showFullName")
+	public String showFullName(@RequestParam String firstName, @RequestParam String lastName)
+	{
+		return firstName + " " + lastName;
+	}
+
+}

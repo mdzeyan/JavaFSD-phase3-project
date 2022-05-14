@@ -1,0 +1,21 @@
+package com.spring.boot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.spring.boot.model.Products;
+import com.spring.boot.repository.ProductRepository;
+
+@Component
+public class ProductService {
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	public Products addProduct(Products pr)
+	{
+		Products result = productRepository.save(pr);
+		return result;
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.spring.boot.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class RequestBodyController {
+	
+	public String showRequestBody(@RequestBody Map<String, String> requestBody)
+	{
+		return requestBody;
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.spring.boot.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PathVariableController {
+	
+	public String showId(@PathVariable Integer id)
+	{
+		return "ID: " + id;
+	}
+
+}

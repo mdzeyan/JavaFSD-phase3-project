@@ -1,0 +1,18 @@
+package com.spring.boot.service;
+
+import org.springframework.stereotype.Component;
+
+import com.spring.boot.repository.ProductRepository;
+
+@Component
+public class ProductService {
+	
+	private ProductRepository productRepository;
+	
+	public String addProduct(Product prdt)
+	{
+		Product result = productRepository.save(prdt);
+		return result;
+	}
+
+}
